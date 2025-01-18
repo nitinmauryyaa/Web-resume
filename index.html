@@ -5,104 +5,205 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nitin Maurya - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     /* General Styles */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f3f4f6;
-      color: #1f2937;
+      background: #f0f8ff; /* Light Bluish Background */
+      color: #333;
       line-height: 1.6;
+      font-size: 18px;
+      min-height: 100vh;
     }
 
-    /* Header */
+    /* Header Section */
     header {
-      background: #1f2937;
-      color: #ffffff;
+      background: linear-gradient(145deg, #0288d1, #03a9f4); /* Gradient Background */
+      color: #fff;
+      padding: 6rem 2rem;
       text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
     }
 
     header h1 {
-      font-size: 2.5rem;
       font-family: 'Montserrat', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
       margin: 0;
+      letter-spacing: 2px;
     }
 
     header p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0 0;
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      font-weight: 500;
     }
 
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 2rem auto;
+    header .tagline {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #ffeb3b;
     }
 
     /* Section Styling */
     .section {
-      background: #ffffff;
-      margin: 1.5rem 0;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 5rem 2rem;
+      margin: 2rem 0;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
     }
 
     .section h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #1f2937;
+      font-weight: 700;
+      color: #03a9f4; /* Light Blue Color */
     }
 
-    .section p, .section ul {
-      font-size: 1rem;
-      color: #374151;
-      margin: 0.5rem 0;
+    .section p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #555;
     }
 
-    .section ul {
-      list-style: none;
-      padding: 0;
+    .section .line {
+      width: 50px;
+      height: 3px;
+      background-color: #0288d1;
+      margin: 0 auto 2rem;
     }
 
-    .section ul li {
-      background: #e5e7eb;
-      margin: 0.5rem 0;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-    }
-
-    /* Footer */
-    footer {
-      background: #1f2937;
-      color: #ffffff;
-      text-align: center;
-      padding: 1.5rem 0;
+    /* Skills Section */
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
       margin-top: 2rem;
     }
 
+    .skills-list .skill {
+      background: #0288d1;
+      color: #e1f5fe; /* Lighter blue for text */
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 180px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .skills-list .skill:hover {
+      transform: scale(1.1);
+    }
+
+    .skills-list .skill i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills-list .skill p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #b3e5fc; /* Light Blue for Subtext */
+    }
+
+    /* Experience Section */
+    .experience {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .experience .box {
+      background: #0288d1;
+      color: #e1f5fe; /* Lighter blue for text */
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience .box h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .experience .box p {
+      font-size: 1.2rem;
+      color: #b3e5fc; /* Light Blue for Subtext */
+    }
+
+    /* Education Section */
+    .education {
+      background: #f0f8ff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .education h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .education p {
+      font-size: 1.1rem;
+    }
+
+    /* Footer Section */
+    footer {
+      background: #0288d1;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
     footer a {
-      color: #60a5fa;
+      color: #fff;
       text-decoration: none;
+      font-weight: 600;
     }
 
     footer a:hover {
       text-decoration: underline;
     }
 
+    /* Contact Section */
+    .contact-info a {
+      color: #0288d1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
-      .section h2 {
-        font-size: 1.5rem;
+      .skills-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .experience .box {
+        width: 100%;
       }
     }
   </style>
@@ -110,40 +211,77 @@
 <body>
   <header>
     <h1>Nitin Maurya</h1>
-    <p>Android Developer</p>
+    <p>Android Developer | Kotlin, Jetpack Compose, C, Python, KMP</p>
+    <p class="tagline">Innovating with code, crafting exceptional Android apps.</p>
   </header>
 
-  <div class="container">
-    <!-- About Section -->
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I am an Android Developer specializing in Kotlin, Jetpack Compose, C, Python, and KMP. 
-        Currently, I am pursuing BCA (1st Year) while building expertise in modern app development.
-      </p>
-    </div>
+  <!-- About Me Section -->
+  <div class="section">
+    <h2>About Me</h2>
+    <div class="line"></div>
+    <p>
+      I am a passionate Android Developer, currently pursuing BCA (1st Year) at Galgotias University. I am a quick learner, a problem solver, and driven by a strong desire to build impactful apps. My skills include Kotlin, Jetpack Compose, and KMP. I enjoy transforming ideas into functional, intuitive mobile apps.
+    </p>
+  </div>
 
-    <!-- Skills Section -->
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Kotlin</li>
-        <li>Jetpack Compose</li>
-        <li>C Programming</li>
-        <li>Python</li>
-        <li>Kotlin Multiplatform (KMP)</li>
-      </ul>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:nitinmaurya34d@gmail.com">nitinmaurya34d@gmail.com</a></p>
+  <!-- Skills Section -->
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="line"></div>
+    <div class="skills-list">
+      <div class="skill">
+        <i class="fab fa-java"></i>
+        <p>Kotlin</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-android"></i>
+        <p>Jetpack Compose</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-cogs"></i>
+        <p>C Programming</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-python"></i>
+        <p>Python</p>
+      </div>
+      <div class="skill">
+        <i class="fas fa-code"></i>
+        <p>KMP</p>
+      </div>
     </div>
   </div>
 
+  <!-- Experience Section -->
+  <div class="section">
+    <h2>Experience</h2>
+    <div class="line"></div>
+    <div class="experience">
+      <div class="box">
+        <h3>2+ Years</h3>
+        <p>Experience in Android development</p>
+      </div>
+      <div class="box">
+        <h3>App Development</h3>
+        <p>Built apps with Kotlin and Jetpack Compose</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <div class="section education">
+    <h3>Education</h3>
+    <p><strong>BCA (1st Year)</strong> - Galgotias University</p>
+    <p>Focus on Android Development and Software Engineering</p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="section contact-info">
+    <h2>Contact</h2>
+    <div class="line"></div>
+    <p>Email: <a href="mailto:nitinmaurya34d@gmail.com">nitinmaurya34d@gmail.com</a></p>
+  </div>
+
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 Nitin Maurya | <a href="mailto:nitinmaurya34d@gmail.com">Contact Me</a></p>
-  </footer>
-</body>
-</html>
+    <p>&copy; Nitin Maurya </p>
