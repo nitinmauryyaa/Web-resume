@@ -12,7 +12,7 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #E8F5E9; /* Light Green */
+      background: #DCE1BE; /* Soft Olive Green */
       color: #333;
       line-height: 1.6;
       min-height: 100vh;
@@ -21,7 +21,7 @@
 
     /* Header */
     header {
-      background: linear-gradient(145deg, #2E7D32, #43A047);
+      background: linear-gradient(145deg, #6B8E23, #556B2F); /* Olive Green Gradient */
       color: #fff;
       padding: 5rem 2rem;
       text-align: center;
@@ -45,7 +45,7 @@
       font-size: 1.2rem;
       font-style: italic;
       font-weight: 600;
-      color: #C8E6C9;
+      color: #F5F5DC; /* Beige */
     }
 
     /* Sections */
@@ -69,14 +69,14 @@
     .section h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #388E3C;
+      color: #556B2F; /* Dark Olive */
       animation: fadeInUp 1s ease-out;
     }
 
     .section .line {
       width: 50px;
       height: 4px;
-      background-color: #43A047;
+      background-color: #6B8E23;
       margin: 0 auto 2rem;
     }
 
@@ -90,8 +90,8 @@
     }
 
     .skills-list .skill {
-      background: #43A047;
-      color: #E8F5E9;
+      background: #6B8E23;
+      color: #F5F5DC;
       padding: 2rem;
       border-radius: 12px;
       text-align: center;
@@ -114,12 +114,38 @@
     .skills-list .skill p {
       font-size: 1.2rem;
       font-weight: 600;
-      color: #C8E6C9;
+    }
+
+    /* Experience Section */
+    .experience {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .experience .box {
+      background: #6B8E23;
+      color: #F5F5DC;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .experience .box h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .experience .box p {
+      font-size: 1.2rem;
     }
 
     /* Footer */
     footer {
-      background: #2E7D32;
+      background: #556B2F;
       color: #fff;
       text-align: center;
       padding: 3rem 1rem;
@@ -145,11 +171,6 @@
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInZoom {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
     }
 
     /* Responsive */
@@ -182,7 +203,7 @@
     <h2>About Me</h2>
     <div class="line"></div>
     <p>
-      I am a passionate Android Developer, currently pursuing BCA (1st Year) at Galgotias University. I am a quick learner, a problem solver, and driven by a strong desire to build impactful apps. My skills include Kotlin, Jetpack Compose, and KMP. I enjoy transforming ideas into functional, intuitive mobile apps.
+      I am a passionate Android Developer, currently pursuing BCA (1st Year) at Galgotias University. I enjoy transforming ideas into functional, intuitive mobile apps.
     </p>
   </div>
 
@@ -191,26 +212,21 @@
     <h2>Skills</h2>
     <div class="line"></div>
     <div class="skills-list">
-      <div class="skill">
-        <i class="fab fa-java"></i>
-        <p>Kotlin</p>
-      </div>
-      <div class="skill">
-        <i class="fab fa-android"></i>
-        <p>Jetpack Compose</p>
-      </div>
-      <div class="skill">
-        <i class="fas fa-cogs"></i>
-        <p>C Programming</p>
-      </div>
-      <div class="skill">
-        <i class="fab fa-python"></i>
-        <p>Python</p>
-      </div>
-      <div class="skill">
-        <i class="fas fa-code"></i>
-        <p>KMP</p>
-      </div>
+      <div class="skill"><i class="fab fa-java"></i><p>Kotlin</p></div>
+      <div class="skill"><i class="fab fa-android"></i><p>Jetpack Compose</p></div>
+      <div class="skill"><i class="fas fa-cogs"></i><p>C Programming</p></div>
+      <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
+      <div class="skill"><i class="fas fa-code"></i><p>KMP</p></div>
+    </div>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="section">
+    <h2>Experience</h2>
+    <div class="line"></div>
+    <div class="experience">
+      <div class="box"><h3>2+ Years</h3><p>Experience in Android Development</p></div>
+      <div class="box"><h3>App Development</h3><p>Built apps with Kotlin & Jetpack Compose</p></div>
     </div>
   </div>
 
@@ -221,7 +237,6 @@
     <p>Email: <a href="mailto:nitinmaurya34d@gmail.com">nitinmaurya34d@gmail.com</a></p>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; Nitin Maurya</p>
   </footer>
