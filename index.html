@@ -23,22 +23,23 @@
     header {
       background: linear-gradient(145deg, #6B8E23, #556B2F);
       color: #fff;
-      padding: 5rem 2rem;
+      padding: 5rem 5%;
       text-align: left;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       animation: fadeIn 1.5s ease-in-out;
     }
 
-    .header-content {
+    .typing-container {
       max-width: 700px;
-      margin-left: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .typing-text {
       font-size: 3.5rem;
       font-weight: 600;
       margin: 0;
-      letter-spacing: 2px;
       white-space: nowrap;
       overflow: hidden;
       border-right: 3px solid #fff;
@@ -59,8 +60,18 @@
       font-size: 1.3rem;
       font-weight: 400;
       opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
+      animation: fadeIn 1.5s ease-in-out forwards;
       animation-delay: 2s;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 600;
+      color: #F5F5DC;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+      animation-delay: 2.5s;
     }
 
     /* Sections */
@@ -102,7 +113,7 @@
       padding: 2rem;
       border-radius: 12px;
       text-align: center;
-      width: 150px;
+      width: 180px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
@@ -177,18 +188,12 @@
 <body>
 
   <header>
-    <div class="header-content">
+    <div class="typing-container">
       <h1 class="typing-text">Nitin Maurya</h1>
       <p class="bio">Android Developer | Kotlin, Jetpack Compose, C, Python, KMP</p>
-      <p class="bio">Innovating with code, crafting exceptional Android apps.</p>
+      <p class="tagline">Innovating with code, crafting exceptional Android apps.</p>
     </div>
   </header>
-
-  <div class="section">
-    <h2>About Me</h2>
-    <div class="line"></div>
-    <p>I am a passionate Android Developer, currently pursuing BCA (1st Year). I specialize in Kotlin, Jetpack Compose, and KMP.</p>
-  </div>
 
   <div class="section">
     <h2>Skills</h2>
@@ -199,16 +204,6 @@
       <div class="skill"><i class="fas fa-cogs"></i><p>C Programming</p></div>
       <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
       <div class="skill"><i class="fas fa-code"></i><p>KMP</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Education</h2>
-    <div class="line"></div>
-    <div class="education">
-      <h3>Bachelor of Computer Applications (BCA)</h3>
-      <p>Galgotias University - 1st Year</p>
-      <p>Focus: Android Development, Software Engineering</p>
     </div>
   </div>
 
