@@ -21,7 +21,7 @@
 
     /* Header */
     header {
-      background: linear-gradient(145deg, #6B8E23, #556B2F); /* Olive Green Gradient */
+      background: linear-gradient(145deg, #6B8E23, #556B2F);
       color: #fff;
       padding: 5rem 2rem;
       text-align: center;
@@ -45,7 +45,7 @@
       font-size: 1.2rem;
       font-style: italic;
       font-weight: 600;
-      color: #F5F5DC; /* Beige */
+      color: #F5F5DC;
     }
 
     /* Sections */
@@ -69,7 +69,7 @@
     .section h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #556B2F; /* Dark Olive */
+      color: #556B2F;
       animation: fadeInUp 1s ease-out;
     }
 
@@ -80,8 +80,8 @@
       margin: 0 auto 2rem;
     }
 
-    /* Skills Section */
-    .skills-list {
+    /* Skills, Experience, Services, Projects */
+    .grid {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -89,42 +89,7 @@
       margin-top: 2rem;
     }
 
-    .skills-list .skill {
-      background: #6B8E23;
-      color: #F5F5DC;
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-      width: 180px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .skills-list .skill:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    }
-
-    .skills-list .skill i {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .skills-list .skill p {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    /* Experience Section */
-    .experience {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .experience .box {
+    .box {
       background: #6B8E23;
       color: #F5F5DC;
       padding: 2rem;
@@ -132,15 +97,47 @@
       text-align: center;
       width: 250px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
 
-    .experience .box h3 {
-      font-size: 2rem;
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .box h3 {
+      font-size: 1.8rem;
       margin-bottom: 1rem;
     }
 
-    .experience .box p {
-      font-size: 1.2rem;
+    /* Call to Action */
+    .cta {
+      background: #556B2F;
+      padding: 3rem;
+      text-align: center;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 3rem auto;
+      width: 80%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 12px 24px;
+      background: #8FBC8F;
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #6B8E23;
     }
 
     /* Footer */
@@ -150,16 +147,6 @@
       text-align: center;
       padding: 3rem 1rem;
       margin-top: 2rem;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
 
     /* Animations */
@@ -175,18 +162,8 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      .skills-list {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .section {
-        width: 90%;
-      }
+      .section { width: 90%; }
+      .grid { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -198,47 +175,57 @@
     <p class="tagline">Innovating with code, crafting exceptional Android apps.</p>
   </header>
 
-  <!-- About Me Section -->
   <div class="section">
     <h2>About Me</h2>
     <div class="line"></div>
-    <p>
-      I am a passionate Android Developer, currently pursuing BCA (1st Year) at Galgotias University. I enjoy transforming ideas into functional, intuitive mobile apps.
-    </p>
+    <p>I am a passionate Android Developer, currently pursuing BCA (1st Year). I specialize in Kotlin, Jetpack Compose, and KMP.</p>
   </div>
 
-  <!-- Skills Section -->
   <div class="section">
     <h2>Skills</h2>
     <div class="line"></div>
-    <div class="skills-list">
-      <div class="skill"><i class="fab fa-java"></i><p>Kotlin</p></div>
-      <div class="skill"><i class="fab fa-android"></i><p>Jetpack Compose</p></div>
-      <div class="skill"><i class="fas fa-cogs"></i><p>C Programming</p></div>
-      <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
-      <div class="skill"><i class="fas fa-code"></i><p>KMP</p></div>
+    <div class="grid">
+      <div class="box"><h3>Kotlin</h3></div>
+      <div class="box"><h3>Jetpack Compose</h3></div>
+      <div class="box"><h3>Python</h3></div>
+      <div class="box"><h3>KMP</h3></div>
     </div>
   </div>
 
-  <!-- Experience Section -->
   <div class="section">
-    <h2>Experience</h2>
+    <h2>Services</h2>
     <div class="line"></div>
-    <div class="experience">
-      <div class="box"><h3>2+ Years</h3><p>Experience in Android Development</p></div>
-      <div class="box"><h3>App Development</h3><p>Built apps with Kotlin & Jetpack Compose</p></div>
+    <div class="grid">
+      <div class="box"><h3>Android App Development</h3></div>
+      <div class="box"><h3>UI/UX Design</h3></div>
+      <div class="box"><h3>Bug Fixing & Optimization</h3></div>
     </div>
   </div>
 
-  <!-- Contact Section -->
   <div class="section">
-    <h2>Contact</h2>
+    <h2>Projects</h2>
     <div class="line"></div>
-    <p>Email: <a href="mailto:nitinmaurya34d@gmail.com">nitinmaurya34d@gmail.com</a></p>
+    <div class="grid">
+      <div class="box"><h3>Music Streaming App</h3></div>
+      <div class="box"><h3>Social Media Clone</h3></div>
+      <div class="box"><h3>Stock Market Tracker</h3></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Testimonials</h2>
+    <div class="line"></div>
+    <p>"Nitin is a fantastic developer! He delivered a high-quality app on time." - Client A</p>
+    <p>"His UI/UX skills are top-notch. Would highly recommend!" - Client B</p>
+  </div>
+
+  <div class="cta">
+    <p>Looking for an experienced Android Developer?</p>
+    <a href="mailto:nitinmaurya34d@gmail.com">Hire Me</a>
   </div>
 
   <footer>
-    <p>&copy; Nitin Maurya</p>
+    <p>&copy; 2025 Nitin Maurya</p>
   </footer>
 
 </body>
